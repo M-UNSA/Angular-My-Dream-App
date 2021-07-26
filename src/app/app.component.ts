@@ -46,4 +46,12 @@ export class AppComponent {
       }
     }
   }
+
+  addUser(newUser: { value: string; focus: () => void; }) {
+    //console.log(newUser.value);
+    this.users.push(newUser.value);
+    newUser.value = '';
+    newUser.focus();
+    return false;
+  }
 }
