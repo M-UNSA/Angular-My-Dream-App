@@ -23,3 +23,8 @@
   <input #hobby type="text" placeholder="hobby">
 </form>
 <app-hello-world>Aqui</app-hello-world>
+<ul>
+  <li *ngFor="let user of users">
+    <app-user [nameUser]="user"></app-user> 
+  </li>
+</ul> 
