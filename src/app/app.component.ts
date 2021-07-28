@@ -15,6 +15,9 @@ export class AppComponent {
   hobbies : string[];
   showHobbies : boolean;
 
+  nameA2 : string = "Marco Edmundo E. Centeno Quispe";
+  age : number = 40;
+
   constructor() {
     console.log("Constructor working...");
     this.name = "Marco Centeno Quispe";
