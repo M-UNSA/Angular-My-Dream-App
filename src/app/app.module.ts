@@ -12,9 +12,10 @@ import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 import { AboutComponent } from './about/about.component';
 import { RouterModule, Route } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Route[] = [
-  {path: '', component: AppComponent },
+  //{path: '', component: AppComponent },
   {path: 'about', component: AboutComponent},
   {path: 'hello', component: HelloWorldComponent},
 ];
@@ -32,6 +33,7 @@ const routes: Route[] = [
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
