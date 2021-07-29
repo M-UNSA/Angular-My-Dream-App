@@ -11,6 +11,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 import { AboutComponent } from './about/about.component';
+import { RouterModule, Route } from '@angular/router';
+
+const routes: Route[] = [
+  {path: '', component: AppComponent },
+  {path: 'about', component: AboutComponent},
+  {path: 'hello', component: HelloWorldComponent},
+];
 
 @NgModule({
   declarations: [
@@ -24,6 +31,7 @@ import { AboutComponent } from './about/about.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
